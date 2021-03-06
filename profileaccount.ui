@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfileAccount</class>
+ <widget class="QMainWindow" name="ProfileAccount">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Photo">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>201</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../untitled1/medium_2fee5a5a7e.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>265</x>
+      <y>70</y>
+      <width>441</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Name: Nickolay</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Surname: Shilov</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="AccessLevel">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Access level: Black </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="Cabinetnumber">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Personal Cabinet: No cabinet</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit">
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Liked Joke&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>0</y>
+      <width>481</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>System Profile </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="getAccess">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>140</y>
+      <width>281</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Get Access</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>0</y>
+      <width>281</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Check your room access</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>220</y>
+      <width>281</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Change Your cabinet number</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="AccessRooms">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>80</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>106: Lecture room</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>112:Director Cabinet</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>315: ClassRoom</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="PersonalCabinetes">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>290</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>415:Personal Cabinet</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>416: Personal Cabinet</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>417: Personal Cabinet</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>418: Personal Cabinet</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="apllyChanges">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>350</y>
+      <width>281</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply Changes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logout">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>520</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Log Out</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>520</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
