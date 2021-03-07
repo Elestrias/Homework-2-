@@ -2,19 +2,19 @@
 #define ADMINPROFILE_H
 
 #include <QMainWindow>
-#include "profileaccount.h"
 
 namespace Ui {
 class AdminProfile;
 }
 
-class AdminProfile : public ProfileAccount
+class AdminProfile : public QMainWindow
 {
     Q_OBJECT
 
 public:
     explicit AdminProfile(QWidget *parent = nullptr);
     ~AdminProfile();
+
 private:
     Ui::AdminProfile *ui;
 };

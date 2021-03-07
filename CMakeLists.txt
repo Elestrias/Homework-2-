@@ -38,7 +38,7 @@ set(PROJECT_SOURCES
     headers/profileaccount.h
     headers/registartionform.h
     headers/mainwindow.h
-    database.txt
+    executable/database.txt
     AccessParametres/User.h
     AccessParametres/User.cpp
     AccessParametres/Room.h

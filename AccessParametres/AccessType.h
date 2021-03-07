@@ -1,5 +1,5 @@
 //
-// Created by rus8- on 07.03.2021.
+// Created by Elestrias on 07.03.2021.
 //
 
 #ifndef UNTITLED8_ACCESSTYPE_H
@@ -9,6 +9,6 @@ enum AccessType{
     GREEN,
     YELLOW,
     RED,
-    BLACK
+
 };
 #endif //UNTITLED8_ACCESSTYPE_H

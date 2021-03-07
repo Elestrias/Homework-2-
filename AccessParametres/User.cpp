@@ -1,5 +1,5 @@
 //
-// Created by rus8- on 07.03.2021.
+// Created by Elestrias on 07.03.2021.
 //
 
 #include "User.h"
@@ -31,11 +31,17 @@ QPair<AccessType, bool> User::changeGlobalAccess(AccessType acc, AccessType newa
     return {access, false};
 }
 
-bool User::comeIn(Room *room) {
-    bool opened = room->getAccess(access);
+QString User::getCabinet(){
+    return personalRoom;
+}
+void User::setCabinet(Room room){
+}
+
+bool User::comeIn(Room &room) {
+    bool opened = room.getAccess(access);
     if(!opened) {
         for (int i = 0; i < adminGarants.size(); ++i) {
-            if(adminGarants[i].second == room->getNumber()){
+            if(adminGarants[i].second == room.getNumber()){
                 opened = true;
             }
         }
@@ -65,35 +71,69 @@ bool User::changeRoomAccess(AccessType acc, Room *room){
 QPair<QString, QString> User::getAccount(){
     return qMakePair(login, password);
 }
-Student::Student(const QPair<QString, QString> &initials, const QString &lovedJoke, const QString log, const QString pass) : User(initials, lovedJoke, log, pass){
-    access = NO_LEVEL;
+QString User::getJoke(){
+    return lovedJoke;
 }
 
-Professor::Professor(const QPair<QString, QString> &initials,const Room &personalRoom, const QString &LovedJoke, const QString log, const QString pass): User(initials, LovedJoke, log, pass), PersonalRoom(personalRoom){
+QString User::toString(AccessType AT){
+    switch(AT){
+        case(NO_LEVEL): return "NO LEVEL";
+        case(GREEN): return "GREEN";
+        case(YELLOW): return "YELLOW";
+        case(RED): return "RED";
+    }
+}
+QString User::getUserType(){
+    return UserType;
+}
+
+Student::Student(const QPair<QString, QString> &initials, const QString &lovedJoke, const QString log, const QString pass) : User(initials, lovedJoke, log, pass){
+    access = NO_LEVEL;
+    UserType = "Student";
+}
+
+
+Professor::Professor(const QPair<QString, QString> &initials,const QString personalRoom, const QString &LovedJoke, const QString log, const QString pass): User(initials, LovedJoke, log, pass){
     access = GREEN;
+    personalCabinete = personalRoom;
+    UserType = "Professor";
+}
+
+
+QString Professor::getCabinet(){
+    return personalCabinete;
+}
+void Professor::setCabinet(Room room){
+    personalCabinete = room.getNumber();
 }
 
 LabStuff::LabStuff(const QPair<QString, QString> &initials, const QString &personalRoom, const QString log, const QString pass): User(initials, personalRoom, log, pass) {
     access = GREEN;
+    UserType = "LabStuff";
 }
-
-Director::Director(const QPair<QString, QString> &initials, const Room &personalRoom,const QString &LovedJoke, const QString log, const QString pass): Professor(initials,
+Director::Director(const QPair<QString, QString> &initials, const QString &personalRoom,const QString &LovedJoke, const QString log, const QString pass): Professor(initials,
                                                                                                                    personalRoom,
                                                                                                                       LovedJoke, log, pass){
     access = YELLOW;
+    UserType = "Director";
 }
 
-Admin::Admin(const QPair<QString, QString> &initials, const Room &PersonalRoom, const QString &LovedJoke, const QString log, const QString pass):Professor(initials,
+
+Admin::Admin(const QPair<QString, QString> &initials, const QString &PersonalRoom, const QString &LovedJoke, const QString log, const QString pass):Professor(initials,
                                                                                                                   PersonalRoom,
                                                                                                                   LovedJoke, log, pass){
     access = RED;
+    UserType = "Admin";
 }
 
 void Admin::updateAccessRoots(User user, AccessType newacc) {
     user.changeGlobalAccess(this->access, newacc);
 }
 void Admin::giveGarant(User user, Room *room) {
-    user.changeRoomAccess(this->access, room);
+    user.changeRoomAccess(RED, room);
 }
+
+
+
 
 

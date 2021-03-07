@@ -11,4 +11,7 @@
 #include <QFile>
 #include <QVector>
 #include <QTextStream>
+#include<QLineEdit>
+#include<QObject>
+#include <QDebug>
 #endif // DEPENDENCIES_H

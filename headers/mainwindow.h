@@ -5,6 +5,7 @@
 #include "registartionform.h"
 #include "../dependencies.h"
 #include "../AccessParametres/User.h"
+#include "../AccessParametres/Room.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -17,9 +18,14 @@ class MainWindow : public QMainWindow
 
 public:
 
-    MainWindow(QWidget *parent = nullptr, QVector<User> users= {});
+    MainWindow(QWidget *parent = nullptr, QVector<User> users= {}, QVector<Room> rooms = {});
     ~MainWindow();
-    bool CheckEnterData(QTextEdit *log, QTextEdit *reg);
+    bool CheckEnterData(QLineEdit *log, QLineEdit *reg);
+    User getUser();
+    QVector<User> getUsers();
+    QVector<Room> getRooms();
+    void ChangeUser(User user);
+    int index_of_cur_user;
 
 
 private slots:
@@ -29,8 +35,8 @@ private:
     ProfileAccount *AccProf;
     RegistrationForm *RegForm;
     QVector<User> users;
+    QVector<Room> rooms;
     User user;
-
 };
 
 #endif // MAINWINDOW_H
