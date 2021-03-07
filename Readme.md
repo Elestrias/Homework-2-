@@ -25,12 +25,12 @@ This is a OOP-oriented project of Room Access System of Innopolis University
 - generateRooms - generates University rooms
 ###Room.h
 - class Room
-- - Room(string) constructor
-- - bool getAccess(AccessType) geting of  Access for users without admin garant
-- - string getNumber();  getting of Room number
-- - string getRoomType(); returns Type of Room 
-- - AccessType getAccessType(); returns needed level of access
-
+- - Room(string) - constructor
+- - bool getAccess(AccessType) - getting of  Access for users without admin garant
+- - string getNumber();  getting - of Room number
+- - string getRoomType(); - returns Type of Room 
+- - AccessType getAccessType(); - returns needed level of access
+####Child Classes of Room 
 - class ClassRoom
 - class LectureRoom
 - class ConferenceRoom
@@ -38,16 +38,16 @@ This is a OOP-oriented project of Room Access System of Innopolis University
 - class DirectorCabinet
 ###User.h
 - class User
-- - User(const pair<string, string>&, const string&, const string, const string)
-- - User()
-- - AccessType getAccess()
-- - pair<string, string> getInitials()
-- - pair<AccessType, bool> changeGlobalAccess(AccessType, AccessType)
-- - bool changeRoomAccess(AccessType, Room*)
-- - bool comeIn(Room&)
-- - string toString(AccessType)
-- - string getUserType()
-    
+- - User(const pair<string, string>&, const string&, const string, const string) - custom sonstructor
+- - User() - base constructor 
+- - AccessType getAccess() - tries to get access in room without admin garants
+- - pair<string, string> getInitials() - returns pair<Name, Surname> od a User
+- - pair<AccessType, bool> changeGlobalAccess(AccessType, AccessType) - Special Function for Admin users thats provide the an access to protected fields of Users to change their permissions 
+- - bool changeRoomAccess(AccessType, Room*) - Special Function for Admin users to open specific rooms for specific users
+- - bool comeIn(Room&) - checks Access permisiions with respect to 2 parametres (AccessType, admin garant)
+- - string toString(AccessType) - parses enum AccessType
+- - string getUserType() - returns type of a child instance
+####Child Classes of User    
 - class Student
 - class Professor
 - class LabStuff
