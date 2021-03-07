@@ -1,7 +1,7 @@
-#include "profileaccount.h"
+#include "../headers/profileaccount.h"
 #include "ui_profileaccount.h"
-#include "dependencies.h"
-#include "mainwindow.h"
+#include "../dependencies.h"
+#include "../headers/mainwindow.h"
 
 ProfileAccount::ProfileAccount(QWidget *parent) :
     QMainWindow(parent),

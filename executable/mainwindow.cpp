@@ -1,10 +1,10 @@
-#include "mainwindow.h"
-#include "./ui_mainwindow.h"
+#include "../headers/mainwindow.h"
+#include "ui_mainwindow.h"
 
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QWidget *parent, QVector<User> users)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow), users(users)
 {
     ui->setupUi(this);
     AccProf = new ProfileAccount();
@@ -21,6 +21,9 @@ MainWindow::~MainWindow()
 bool MainWindow::CheckEnterData(QTextEdit *log, QTextEdit *pas){
     QString login = log->toPlainText();
     QString password = pas ->toPlainText();
+    for (int i=0;i<users.size(); ) {
+
+    }
     return false;
 }
 void MainWindow::on_enter_clicked()

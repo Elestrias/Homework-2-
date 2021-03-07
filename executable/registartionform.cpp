@@ -1,4 +1,4 @@
-#include "registartionform.h"
+#include "../headers/registartionform.h"
 #include "ui_registartionform.h"
 
 RegistrationForm::RegistrationForm(QWidget *parent) :

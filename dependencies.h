@@ -6,4 +6,9 @@
 #include <QApplication>
 #include <QLabel>
 #include <QWidget>
+#include <QPair>
+#include <QString>
+#include <QFile>
+#include <QVector>
+#include <QTextStream>
 #endif // DEPENDENCIES_H
